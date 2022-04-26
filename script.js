@@ -47,3 +47,40 @@ const actionSquares = document.querySelectorAll('.actionsquare')
 for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
 }
+
+const getRandomNumber = (maxNum) => {
+  return Math.floor(Math.random() * maxNum);
+}
+
+document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "Space" ||        
+      e.key == 32        
+  ) {
+    function randbg() {
+      let r = getRandomNumber(255);
+      let g = getRandomNumber(255);
+      let b = getRandomNumber(255);
+      let randomcolors = "rgb(" + r + "," + g + "," + b 
+      + ")";
+      let li = document.createElement('li')
+      let ul = document.querySelector('ul')
+      ul.appendChild(li)
+      li.innerText = getElapsedTime() + ' Changed background color'
+      return randomcolors
+  }
+  document.body.style.backgroundColor = randbg(); 
+  }
+}
+
+
+document.body.onkeyup = function(e) {
+  if (e.key == " " ||
+      e.code == "KeyL" ||        
+      e.key == "l"        
+  ) {
+    let ul = document.createElement('ul')
+    ul.innerHTML = ''
+    console.log("key press")
+  }
+}
