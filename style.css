@@ -2,9 +2,9 @@ body{
     margin: auto;
     transition: .3s;
   }
-  .displayedsquare{
+  
+  .actionsquare, .displayedsquare {
     margin: 25px;
-  .actionsquare, 
     height: 50px;
     width: 50px;
     transition: .3s;
